@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="585.0"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controllers.myAccountController">
+    <Label fx:id="header" alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="107.0"
+           prefHeight="42.0" prefWidth="394.0" text="Profile" textAlignment="CENTER" textFill="#6f6f6f">
+        <font>
+            <Font name="Leelawadee UI Semilight" size="28.0"/>
+        </font>
+    </Label>
+    <ImageView fitHeight="61.0" fitWidth="54.0" layoutX="273.0" layoutY="37.0" pickOnBounds="true"
+               preserveRatio="true">
+        <Image url="@images/user.png"/>
+    </ImageView>
+    <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="168.0"
+           prefHeight="32.0" prefWidth="103.0" text="Username" textAlignment="CENTER" textFill="#4f4f4f">
+        <font>
+            <Font name="Leelawadee UI Semilight" size="13.0"/>
+        </font>
+    </Label>
+    <JFXButton fx:id="logout" layoutX="14.0" layoutY="10.0" onAction="#logOutAction" prefHeight="32.0"
+               prefWidth="71.0" text="Log Out" textFill="#797979">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </JFXButton>
+    <JFXButton fx:id="exitbtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="547.0"
+               layoutY="14.0" onAction="#exitAction" prefHeight="21.0" prefWidth="21.0" ripplerFill="#f5f5f5"
+               textFill="WHITE">
+        <font>
+            <Font size="1.0"/>
+        </font>
+        <graphic>
+            <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/error.png"/>
+            </ImageView>
+        </graphic>
+    </JFXButton>
+    <JFXTextField fx:id="username" focusColor="#ffc824" layoutX="206.0" layoutY="161.0" prefHeight="26.0"
+                  prefWidth="208.0"/>
+    <JFXTextField fx:id="password" focusColor="#ffc824" layoutX="208.0" layoutY="203.0" prefHeight="26.0"
+                  prefWidth="208.0"/>
+    <JFXTextField fx:id="confirmPassword" focusColor="#ffc824" layoutX="208.0" layoutY="247.0" prefHeight="26.0"
+                  prefWidth="208.0"/>
+    <JFXTextField fx:id="location" focusColor="#ffc824" layoutX="208.0" layoutY="292.0" prefHeight="26.0"
+                  prefWidth="208.0"/>
+    <JFXButton fx:id="update" layoutX="209.0" layoutY="347.0" onAction="#updateAction" prefHeight="32.0"
+               prefWidth="95.0" style="-fx-background-color: #f39c12;" text="Update!" textFill="WHITE">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </JFXButton>
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="76.0" layoutY="211.0" prefHeight="32.0"
+           prefWidth="103.0" text="Password" textAlignment="CENTER" textFill="#4f4f4f">
+        <font>
+            <Font name="Leelawadee UI Semilight" size="13.0"/>
+        </font>
+    </Label>
+    <Label fx:id="nameLabel11" alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="257.0"
+           prefHeight="32.0" prefWidth="103.0" text="Confirm Password" textAlignment="CENTER" textFill="#4f4f4f">
+        <font>
+            <Font name="Leelawadee UI Semilight" size="13.0"/>
+        </font>
+    </Label>
+    <Label fx:id="nameLabel111" alignment="CENTER" contentDisplay="CENTER" layoutX="79.0" layoutY="297.0"
+           prefHeight="32.0" prefWidth="103.0" text="Location" textAlignment="CENTER" textFill="#4f4f4f">
+        <font>
+            <Font name="Leelawadee UI Semilight" size="13.0"/>
+        </font>
+    </Label>
+    <JFXButton fx:id="dashboard" layoutX="315.0" layoutY="347.0" onAction="#dashboardAction" prefHeight="32.0"
+               prefWidth="103.0" text="Dashboard" textFill="#797979">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </JFXButton>
+    <Label fx:id="allFieldsRequired" layoutX="211.0" layoutY="327.0" text="All fields required" textFill="#cf5d5d"/>
+</AnchorPane>

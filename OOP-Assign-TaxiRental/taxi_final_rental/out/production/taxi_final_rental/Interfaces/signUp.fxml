@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="374.0" prefWidth="351.0"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controllers.signUpController">
+    <JFXTextField fx:id="location" focusColor="#219ce0" layoutX="72.0" layoutY="245.0" prefHeight="25.0"
+                  prefWidth="214.0" promptText="Location"/>
+    <JFXTextField fx:id="Susername" focusColor="#219ce0" layoutX="72.0" layoutY="80.0" prefHeight="25.0"
+                  prefWidth="214.0" promptText="Username"/>
+    <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="29.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@images/user.png"/>
+    </ImageView>
+    <JFXButton fx:id="signUp" layoutX="67.0" layoutY="305.0" onAction="#signUpAction" prefHeight="35.0"
+               prefWidth="140.0" style="-fx-background-color: #219ce0;" text="Sign Up" textFill="WHITE"/>
+    <JFXRadioButton fx:id="maleRadio" layoutX="73.0" layoutY="196.0" text="Male"/>
+    <JFXRadioButton fx:id="femaleRadio" layoutX="161.0" layoutY="196.0" text="Female"/>
+    <JFXButton fx:id="login" layoutX="216.0" layoutY="305.0" onAction="#loginAction" prefHeight="35.0" prefWidth="70.0"
+               style="-fx-background-color: #0f9d58;" text="Log In" textFill="WHITE"/>
+    <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="29.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@images/lock.png"/>
+    </ImageView>
+    <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="29.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@images/meeting-point.png"/>
+    </ImageView>
+    <JFXPasswordField fx:id="Spassword" layoutX="72.0" layoutY="134.0" prefHeight="25.0" prefWidth="214.0"
+                      promptText="Password"/>
+    <JFXButton fx:id="exit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="317.0"
+               layoutY="14.0" onAction="#exitAction" prefHeight="21.0" prefWidth="21.0" ripplerFill="#f5f5f5"
+               textFill="WHITE">
+        <font>
+            <Font size="1.0"/>
+        </font>
+        <graphic>
+            <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/error.png"/>
+            </ImageView>
+        </graphic>
+    </JFXButton>
+    <JFXSpinner fx:id="spinner" layoutX="33.0" layoutY="314.0" prefHeight="17.0" prefWidth="17.0"/>
+    <Label fx:id="allFieldsRequiredSignUp" layoutX="73.0" layoutY="284.0" text="All Fields Required"
+           textFill="#c24242"/>
+</AnchorPane>

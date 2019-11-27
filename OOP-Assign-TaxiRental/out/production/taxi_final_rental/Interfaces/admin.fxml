@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controllers.adminController">
+    <children>
+        <JFXTextField fx:id="rate" focusColor="#219ce0" layoutX="317.0" layoutY="145.0" prefHeight="25.0"
+                      prefWidth="214.0" promptText="Rate" unFocusColor="#929292"/>
+        <JFXTextField fx:id="driver" focusColor="#219ce0" layoutX="68.0" layoutY="101.0" prefHeight="25.0"
+                      prefWidth="214.0" promptText="Driver" unFocusColor="#929292"/>
+        <JFXButton fx:id="submit" layoutX="68.0" layoutY="319.0" onAction="#submitAction" prefHeight="35.0"
+                   prefWidth="80.0" style="-fx-background-color: #219ce0;" text="Submit" textFill="WHITE"/>
+        <JFXButton fx:id="exit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="562.0"
+                   layoutY="54.0" onAction="#exitAction" prefHeight="21.0" prefWidth="21.0" ripplerFill="#f5f5f5"
+                   textFill="WHITE">
+            <font>
+                <Font size="1.0"/>
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="dashboard" layoutX="412.0" layoutY="319.0" onAction="#dashboardAction" prefHeight="35.0"
+                   prefWidth="120.0" style="-fx-background-color: #e17055;" text="Dashboard" textFill="WHITE"/>
+        <JFXTextField fx:id="make" focusColor="#219ce0" layoutX="317.0" layoutY="101.0" prefHeight="25.0"
+                      prefWidth="214.0" promptText="Make" unFocusColor="#929292"/>
+        <JFXTextArea fx:id="daysAvailable" focusColor="#cd614b" layoutX="68.0" layoutY="240.0" prefHeight="26.0"
+                     prefWidth="464.0" promptText="Days Available" unFocusColor="#78ac29"/>
+        <ImageView fitHeight="60.0" fitWidth="52.0" layoutX="68.0" layoutY="28.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@images/taxiDash.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="194.0" layoutY="38.0" text="Add New Taxi Driver" textFill="#848484">
+            <font>
+                <Font name="Corbel" size="25.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="taxiMobile" focusColor="#219ce0" layoutX="68.0" layoutY="147.0" prefHeight="25.0"
+                      prefWidth="214.0" promptText="Mobile" unFocusColor="#929292"/>
+        <JFXButton fx:id="exitbtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="561.0"
+                   layoutY="16.0" onAction="#exitAction" prefHeight="21.0" prefWidth="21.0" ripplerFill="#f5f5f5"
+                   textFill="WHITE">
+            <font>
+                <Font size="1.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/error.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <JFXTextField fx:id="taxiLocation" focusColor="#219ce0" layoutX="68.0" layoutY="195.0" prefHeight="25.0"
+                      prefWidth="214.0" promptText="Location" unFocusColor="#929292"/>
+        <Label fx:id="allFieldsRequired" layoutX="69.0" layoutY="291.0" text="All Fields Required" textFill="#ca3e3e"/>
+        <Label fx:id="success" layoutX="213.0" layoutY="323.0" text="Taxi Driver Added!" textFill="#3e94c7">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="417.0" prefWidth="335.0"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controllers.dashboardController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="131.0" prefHeight="42.0"
+               prefWidth="132.0" text="Welcome!" textAlignment="CENTER" textFill="#6f6f6f">
+            <font>
+                <Font name="Leelawadee UI Semilight" size="28.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="bookNow" layoutX="71.0" layoutY="292.0" onAction="#bookNowAction" prefHeight="42.0"
+                   prefWidth="194.0" style="-fx-background-color: #e17055;" text="Book Taxi Now" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="87.0" fitWidth="93.0" layoutX="124.0" layoutY="55.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@images/taxiDash.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="93.0" layoutY="173.0"
+               prefHeight="32.0" prefWidth="150.0" text="John" textAlignment="CENTER" textFill="#4f4f4f">
+            <font>
+                <Font name="Leelawadee UI Semilight" size="20.0"/>
+            </font>
+        </Label>
+        <Label layoutX="102.0" layoutY="260.0" prefHeight="32.0" prefWidth="132.0" text="Please select your option"
+               textAlignment="CENTER" textFill="#696969">
+            <font>
+                <Font name="Leelawadee UI Semilight" size="12.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="myAcc" layoutX="112.0" layoutY="342.0" onAction="#myAccAction" prefHeight="32.0"
+                   prefWidth="111.0" style="-fx-background-color: #636e72;" text="My Account" textFill="WHITE"/>
+        <JFXButton fx:id="logOut" layoutX="10.0" layoutY="11.0" onAction="#logOutAction" prefHeight="32.0"
+                   prefWidth="71.0" text="Log Out" textFill="#797979">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="exitbtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="297.0"
+                   layoutY="15.0" onAction="#exitAction" prefHeight="21.0" prefWidth="21.0" ripplerFill="#f5f5f5"
+                   textFill="WHITE">
+            <font>
+                <Font size="1.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/error.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+
+    </children>
+</AnchorPane>

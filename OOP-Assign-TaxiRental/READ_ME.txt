@@ -1,0 +1,1 @@
+In the sql workbench or preffered DBMS create a localhost database, copy the sql provided and create a user - user with password user and localhost connection for the JDBC to connect to, the Config class in Connection package has the information for the connection

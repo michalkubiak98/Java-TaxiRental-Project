@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="325.0" prefWidth="296.0" xmlns="http://javafx.com/javafx/11.0.1"
+            fx:controller="Controllers.loginController">
+    <children>
+        <JFXCheckBox fx:id="rememberMe" layoutX="35.0" layoutY="238.0" prefHeight="25.0" prefWidth="126.0"
+                     text="Remember Me" textFill="#6b6b6b" unCheckedColor="#6b6b6b"/>
+        <JFXTextField fx:id="username" focusColor="#0f9d58" layoutX="36.0" layoutY="127.0" prefHeight="25.0"
+                      prefWidth="214.0" promptText="Username"/>
+        <ImageView fx:id="imageViewUsers" fitHeight="41.0" fitWidth="42.0" layoutX="36.0" layoutY="48.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/users.png"/>
+            </image>
+        </ImageView>
+        <JFXSpinner fx:id="spinner" layoutX="118.0" layoutY="290.0" prefHeight="19.0" prefWidth="50.0"/>
+        <JFXButton fx:id="login" layoutX="180.0" layoutY="233.0" onAction="#loginAction" prefHeight="35.0"
+                   prefWidth="70.0" style="-fx-background-color: #0f9d58;" text="Log In" textFill="WHITE"/>
+        <JFXButton fx:id="signUp" layoutX="147.0" layoutY="51.0" onAction="#signUpAction" prefHeight="35.0"
+                   prefWidth="103.0" style="-fx-background-color: #219ce0;" text="Sign Up" textFill="WHITE"/>
+        <JFXPasswordField fx:id="password" focusColor="#0f9d58" layoutX="36.0" layoutY="170.0" prefHeight="25.0"
+                          prefWidth="214.0" promptText="Password"/>
+        <JFXButton fx:id="exit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="251.0"
+                   layoutY="11.0" onAction="#exitAction" prefHeight="21.0" prefWidth="21.0" ripplerFill="#f5f5f5"
+                   textFill="WHITE">
+            <font>
+                <Font size="1.0"/>
+            </font>
+        </JFXButton>
+        <Label fx:id="incorrectText" layoutX="37.0" layoutY="104.0" text="Username or Password incorrect"
+               textFill="#2497da" visible="false"/>
+        <JFXButton fx:id="exit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="261.0"
+                   layoutY="10.0" onAction="#exitAction" prefHeight="21.0" prefWidth="21.0" ripplerFill="#f5f5f5"
+                   textFill="WHITE">
+            <font>
+                <Font size="1.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/error.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <Label fx:id="userNotExist" layoutX="37.0" layoutY="208.0" text="User does not exist" textFill="#d53a3a"/>
+    </children>
+</AnchorPane>

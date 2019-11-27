@@ -1,0 +1,234 @@
+@startuml
+
+title __CONTROLLERS's Class Diagram__\n
+
+  namespace Controllers {
+    class Controllers.Customer {
+        - location : String
+        - password : String
+        - username : String
+        + Customer()
+        + Customer()
+        + Customer()
+        + getLocation()
+        + getPassword()
+        + getUsername()
+        + setLocation()
+        + setPassword()
+        + setUsername()
+        + toString()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.Taxi {
+        - Tlocation : SimpleStringProperty
+        - days : SimpleStringProperty
+        - driver : SimpleStringProperty
+        - id : SimpleStringProperty
+        - make : SimpleStringProperty
+        - mobile : SimpleStringProperty
+        - rate : SimpleStringProperty
+        + Taxi()
+        + daysProperty()
+        + driverProperty()
+        + getDays()
+        + getDriver()
+        + getId()
+        + getMake()
+        + getMobile()
+        + getRate()
+        + getTlocation()
+        + idProperty()
+        + makeProperty()
+        + mobileProperty()
+        + rateProperty()
+        + setDays()
+        + setDriver()
+        + setId()
+        + setMake()
+        + setMobile()
+        + setRate()
+        + setTlocation()
+        + tlocationProperty()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.adminController {
+        - allFieldsRequired : Label
+        - connection : Connection
+        - dashboard : JFXButton
+        - daysAvailable : JFXTextArea
+        - driver : JFXTextField
+        - exit : JFXButton
+        - exitbtn : JFXButton
+        - make : JFXTextField
+        - pst : PreparedStatement
+        - rate : JFXTextField
+        - submit : JFXButton
+        - success : Label
+        - taxiLocation : JFXTextField
+        - taxiMobile : JFXTextField
+        + initialize()
+        ~ dashboardAction()
+        ~ exitAction()
+        ~ submitAction()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.bookNowController {
+        {static} + IDinputFinal : int
+        + bookdriver : String
+        + bookmake : String
+        + bookmobile : String
+        + bookrate : float
+        + price : double
+        - BookNow : JFXButton
+        - DestinationCombo : JFXComboBox<String>
+        - IDinput : JFXTextField
+        - Price : Label
+        - SuccessOrder : Label
+        - Tlocation : TableColumn<Taxi, String>
+        - connection : Connection
+        - datePicker : DatePicker
+        - days : TableColumn<Taxi, String>
+        - driver : TableColumn<Taxi, String>
+        - exitbtn : JFXButton
+        - id : TableColumn<Taxi, Integer>
+        - logOut : JFXButton
+        - make : TableColumn<Taxi, String>
+        - mobile : TableColumn<Taxi, String>
+        - myAcc : JFXButton
+        - pickDay : JFXComboBox<String>
+        - priceLabel : Label
+        - pst : PreparedStatement
+        - rate : TableColumn<Taxi, Float>
+        - tableView : TableView<Taxi>
+        - whereLabel : Label
+        + initialize()
+        ~ BookNowAction()
+        ~ exitAction()
+        ~ logOutAction()
+        ~ myAccAction()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.dashboardController {
+        - bookNow : JFXButton
+        - exit : ImageView
+        - logOut : JFXButton
+        - myAcc : JFXButton
+        - nameLabel : Label
+        + initialize()
+        ~ bookNowAction()
+        ~ exitAction()
+        ~ logOutAction()
+        ~ myAccAction()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.loginController {
+        + locationHeader : String
+        {static} + locationT : String
+        + password : JFXPasswordField
+        + username : JFXTextField
+        {static} + usernameT : String
+        - connection : Connection
+        - imageViewUsers : ImageView
+        - login : JFXButton
+        - pst : PreparedStatement
+        - rememberMe : JFXCheckBox
+        - signUp : JFXButton
+        - spinner : JFXSpinner
+        - userNotExist : Label
+        + initialize()
+        ~ exitAction()
+        ~ loginAction()
+        ~ signUpAction()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.myAccountController {
+        - allFieldsRequired : Label
+        - confirmPassword : JFXTextField
+        - connection : Connection
+        - dashboard : JFXButton
+        - exitbtn : JFXButton
+        - header : Label
+        - location : JFXTextField
+        - logout : JFXButton
+        - nameLabel : Label
+        - nameLabel11 : Label
+        - nameLabel111 : Label
+        - password : JFXTextField
+        - pst : PreparedStatement
+        - update : JFXButton
+        - username : JFXTextField
+        + initialize()
+        ~ dashboardAction()
+        ~ exitAction()
+        ~ logOutAction()
+        ~ updateAction()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.signUpController {
+        - Spassword : JFXPasswordField
+        - Susername : JFXTextField
+        - allFieldsRequiredSignUp : Label
+        - connection : Connection
+        - exit : JFXButton
+        - femaleRadio : JFXRadioButton
+        - location : JFXTextField
+        - login : JFXButton
+        - maleRadio : JFXRadioButton
+        - pst : PreparedStatement
+        - signUp : JFXButton
+        - spinner : JFXSpinner
+        + initialize()
+        + userExists()
+        ~ exitAction()
+        ~ loginAction()
+        ~ signUpAction()
+        - getGender()
+    }
+  }
+  
+
+  Controllers.adminController .up.|> javafx.fxml.Initializable
+  Controllers.adminController o-- Connection.DBHandler : handler
+  Controllers.bookNowController .up.|> javafx.fxml.Initializable
+  Controllers.bookNowController -up-|> Controllers.loginController
+  Controllers.bookNowController o-- Connection.DBHandler : handler
+  Controllers.dashboardController .up.|> javafx.fxml.Initializable
+  Controllers.dashboardController -up-|> Controllers.loginController
+  Controllers.loginController .up.|> javafx.fxml.Initializable
+  Controllers.loginController -up-|> Controllers.signUpController
+  Controllers.loginController o-- Connection.DBHandler : handler
+  Controllers.myAccountController .up.|> javafx.fxml.Initializable
+  Controllers.myAccountController o-- Connection.DBHandler : handler
+  Controllers.signUpController .up.|> javafx.fxml.Initializable
+  Controllers.signUpController o-- Connection.DBHandler : handler
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
